@@ -2,7 +2,7 @@
 title: "Symmetric Encryption in JavaScript"
 date: 2019-04-17T11:52:54+01:00
 categories: ["Software Engineering"]
-tags: ["Cryptography", "JavaScript", "NodeJS"]
+tags: ["cryptography", "javascript", "nodejs"]
 images: ["/encryption.jpeg"]
 draft: false
 ---

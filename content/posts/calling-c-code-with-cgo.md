@@ -2,12 +2,12 @@
 title: "Calling C code with cgo"
 date: 2019-08-22T00:59:54+01:00
 categories: ["Software Engineering"]
-tags: ["Golang", "Go", "cgo", "C", "C++"]
+tags: ["golang", "go", "cgo", "c", "c++"]
 images: ["/cgo.jpg"]
 draft: false
 ---
 
-{{< figure src="/cgo.jpg" alt="Encryption_image" >}}
+{{< figure src="/cgo.jpg" alt="cgo" >}}
 
 C has long being the lingua-franca of programming. While programming languages, frameworks, tools e.t.c. come and go, this general-purpose, low level language developed at Bells Lab by Dennis Ritchie has been around for decades and shows no sign of fading. This is largely because of its closeness to hardware, great portability and efficiency, which made it an ideal choice for low-level development. Many programs today such as the Linux OS, Windows OS, PostgreSQL database, hardware drivers e.t.c., are largely written in C.
 

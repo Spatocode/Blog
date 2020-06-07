@@ -1,11 +1,13 @@
 ---
 title: "Understanding microservice architecture"
-date: 2019-08-22T00:59:54+01:00
+date: 2020-06-07T21:20:54+01:00
 categories: ["Software Engineering"]
 tags: ["microservices", "devops", "backend", "software architecture"]
-images: ["/cgo.jpg"]
+images: ["/microservices-architecture.png"]
 draft: false
 ---
+
+{{< figure src="/microservices-architecture.png" alt="microservices-architecture" >}}
 
 Microservices is a buzz word in the world of Software Engineering architecture. It has completely changed the way we build our applications nowadays. But what the heck are microservices? Microservice is simply an architectural approach based on building an application as a collection of small services. Using microservices means building applications from loosely coupling services.
 
