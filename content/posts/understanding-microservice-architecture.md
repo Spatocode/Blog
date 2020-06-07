@@ -11,7 +11,7 @@ draft: false
 
 Microservices is a buzz word in the world of Software Engineering architecture. It has completely changed the way we build our applications nowadays. But what the heck are microservices? Microservice is simply an architectural approach based on building an application as a collection of small services. Using microservices means building applications from loosely coupling services.
 
-Are you still confused? Let me give you an instance. We can decide to build an e-commerce application that adopts the microservice architecture. We could build different parts of our application like payment system, review system, authentication system and guest workflow, all as a separate independent service. These systems works independently of each other and can be managed separately.
+Still confused? Let me give you an instance. We can decide to build an e-commerce application that adopts the microservice architecture. We could build different parts of our application like payment system, review system, authentication system and guest workflow, all as a separate independent service. These systems works independently of each other and can be managed separately.
 
 Before now Software Engineers make use of monolithic approach in building applications. Monolithic approach means our applications are tightly coupled. They are just a single unit and every part of the application is in one code base. Monolithic architecture is better if your application is simple, and is written in same language.
 
