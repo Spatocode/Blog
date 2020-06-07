@@ -1,6 +1,6 @@
 baseURL = "https://blog.spatocode.com/"
 languageCode = "en-us"
-title = "Ekene's Blog"
+title = "Kene's Blog"
 theme = "bootstrap4-blog"
 copyright = "Copyright (c) 2020 Ekene Izukanne"
 
@@ -17,6 +17,8 @@ copyright = "Copyright (c) 2020 Ekene Izukanne"
 
   # Show header (default: true)
   #header_visible = true
+
+  favicon = "/favicon.png"
 
   # Format dates with Go's time formatting
   date_format = "Mon Jan 02, 2006"
