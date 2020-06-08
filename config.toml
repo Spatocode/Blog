@@ -6,8 +6,24 @@ copyright = "Copyright (c) 2020 Ekene Izukanne"
 disqusShortname = "blog-spatocode-com"
 
 [[menu.sidebar]]
-  name = "Spatocode"
+  name = "Website"
   url = "https://www.spatocode.com"
+
+[[menu.sidebar]]
+  name = "Mail"
+  url = "malito:ekeneizukanne@gmail.com"
+
+[[menu.sidebar]]
+  name = "Github"
+  url = "https://www.github.com/spatocode"
+
+[[menu.sidebar]]
+  name = "Twitter"
+  url = "https://www.twitter.com/spatocode"
+
+[[menu.sidebar]]
+  name = "Facebook"
+  url = "https://www.facebook.com/spatocode"
 
 [params]
   # Site author
