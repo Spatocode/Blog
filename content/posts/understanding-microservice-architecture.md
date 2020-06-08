@@ -13,9 +13,11 @@ Microservices is a buzz word in the world of Software Engineering architecture. 
 
 Still confused? Let me give you an instance. We can decide to build an e-commerce application that adopts the microservice architecture. We could build different parts of our application like payment system, review system, authentication system and guest workflow, all as a separate independent service. These systems works independently of each other and can be managed separately.
 
+Let me give you another instance. Suppose we want to use NodeJS to build a web application which provides a collection of online tools like image processing tool, video processing tool, real-time communication tool and data processing tool. All these tools make up our complete application. Now we want to adopt microservice architecture in building this application. What do we do? We can select the best language and technology for each tool. NodeJS is not best suited for CPU-intensive operations like image/video processing due to being single threaded by default. For this reason we may choose to use Golang to build our image/video processing tool because it is a pretty fast compiled language. We can now decide to use NodeJS for building our real-time communication and data processing tool. Awesome right? All these tools are independent of each other and are built separately using different languages. After building these tools we need to integrate it together to form a single application by making sure they communicate properly through a well defined interface.
+
 Before now Software Engineers make use of monolithic approach in building applications. Monolithic approach means our applications are tightly coupled. They are just a single unit and every part of the application is in one code base. Monolithic architecture is better if your application is simple, and is written in same language.
 
-Microservice approach gives developers flexibility, simplicity and scalability in building complex applications. That's why a lot of company like Google, Uber, Amazon, Spotify, Netflix, SoundCloud e.t.c. has adopted this approach in building their application. 
+Microservice approach gives developers flexibility, simplicity and scalability in building complex applications. That's why a lot of company like Google, Uber, Amazon, Spotify, Netflix, SoundCloud e.t.c. has adopted this approach in building their applications. 
 
 ### Advantages of microservices
 
