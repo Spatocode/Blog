@@ -49,8 +49,11 @@
       <div class="container">
         <nav class="nav blog-nav">
           <a class="nav-link {{ if .IsHome }}active{{ end }}" href="{{ .Site.BaseURL | absLangURL }}">
-            {{ .Site.Title }}<br>
-            <small>{{ .Site.Params.Description }}</small>
+            <img src="{{ .Site.Params.favicon }}" width="40" height="40" alt="logo"/>
+            <span>
+              {{ .Site.Title }}<br>
+              <small>{{ .Site.Params.Description }}</small>
+            </span>
           </a>
         </nav>
       </div>
