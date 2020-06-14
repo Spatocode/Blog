@@ -35,7 +35,7 @@ disqusShortname = "blog-spatocode-com"
   # Show header (default: true)
   #header_visible = true
 
-  favicon = "/favicon.png"
+  favicon = "/favicon.ico"
 
   # Format dates with Go's time formatting
   date_format = "Mon Jan 02, 2006"
