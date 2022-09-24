@@ -4,6 +4,7 @@ title = "Kene's Blog"
 theme = "bootstrap4-blog"
 copyright = "Copyright (c) 2020 Ekene Izukanne"
 disqusShortname = "blog-spatocode-com"
+publishDir = "public"
 
 [[menu.sidebar]]
   name = "Website"
