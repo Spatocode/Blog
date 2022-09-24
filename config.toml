@@ -19,7 +19,7 @@ publishDir = "public"
 [[menu.sidebar]]
   name = "Twitter"
   weight = 3
-  url = "https://www.twitter.com/itesigwe"
+  url = "https://www.twitter.com/spatocode_"
 
 [[menu.sidebar]]
   name = "Linkedin"
@@ -71,7 +71,7 @@ publishDir = "public"
 
   [params.sidebar]
     # Optional about block for sidebar (can be Markdown)
-    about = "Articles on Software Engineering and more. All articles are written by [Ekene Izukanne](https://www.spatocode.com/about), Software Developer and Open Sourcerer."
+    about = "Articles on Software Engineering and more. All articles are written by [Ekene Izukanne](https://www.spatocode.com/about)"
 
     # How many posts to show on the sidebar (Default: 5)
     #num_recent_posts = 2
