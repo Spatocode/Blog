@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Understanding microservice architecture" />
+<meta property="og:description" content="Microservices is a buzz word in the world of Software Engineering architecture. It has completely changed the way we build our applications nowadays. But what the heck are microservices? Microservice is simply an architectural approach based on building an application as a collection of small services. Using microservices means building applications from loosely coupling services.
+Still confused? Let me give you an instance. We can decide to build an e-commerce application that adopts the microservice architecture." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.spatocode.com/posts/understanding-microservice-architecture/" /><meta property="og:image" content="https://blog.spatocode.com/microservices-architecture.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-06-07T21:20:54+01:00" />
+<meta property="article:modified_time" content="2020-06-07T21:20:54+01:00" />
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://blog.spatocode.com/microservices-architecture.png"/>
+
+<meta name="twitter:title" content="Understanding microservice architecture"/>
+<meta name="twitter:description" content="Microservices is a buzz word in the world of Software Engineering architecture. It has completely changed the way we build our applications nowadays. But what the heck are microservices? Microservice is simply an architectural approach based on building an application as a collection of small services. Using microservices means building applications from loosely coupling services.
+Still confused? Let me give you an instance. We can decide to build an e-commerce application that adopts the microservice architecture."/>
+<meta name="generator" content="Hugo 0.104.0" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Understanding microservice architecture",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://blog.spatocode.com/microservices-architecture.png",
+    "height": "594",
+    "width": "1020"
+  },
+  "url": "https://blog.spatocode.com/posts/understanding-microservice-architecture/",
+  "wordCount": "1058",
+  "datePublished": "2020-06-07T21:20:54+01:00",
+  "dateModified": "2020-06-07T21:20:54+01:00",
+  "author": {
+    "@type": "Person",
+    "name": "Ekene Izukanne"
+  },
+  "keywords": "Software Engineering, microservices, devops, backend, software architecture"
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://blog.spatocode.com/posts/understanding-microservice-architecture/">
+
+    <title>Understanding microservice architecture | Kene&#39;s Blog</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="https://blog.spatocode.com/css/style.d50ccb40fc95978386d80826c3835f7987150679f8d6e8bffff106e335ec0615.css" rel="stylesheet" integrity="sha256-1QzLQPyVl4OG2Agmw4NfeYcVBnn41ui///EG4zXsBhU=" crossorigin="anonymous">
+    <link rel="icon" href="/favicon.ico" />
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="https://blog.spatocode.com/js/fontawesome.min.16a86fa8fbdecc0f27392feecb61ee0803a507820bded359407103a49126b52c.js" integrity="sha256-FqhvqPvezA8nOS/uy2HuCAOlB4IL3tNZQHEDpJEmtSw=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+    
+<script src="https://blog.spatocode.com/js/haven.umd.min.0cfe03b21fccee4e397633c446b6aea85e9f14a1c285d7c9aec8808c89796900.js" integrity="sha256-DP4Dsh/M7k45djPERrauqF6fFKHChdfJrsiAjIl5aQA=" crossorigin="anonymous"></script>
+
+<script>
+Haven.create({
+    notification: {
+        
+        styles: {
+            background: '#428bca',
+            textColor: '#ffffff',
+            buttonBackgroundColor: '#f71559',
+            buttonTextColor: '#ffffff',
+        },
+    },
+    translations: {
+      "en": {
+            notification: {
+                policy: 'Learn more.',
+                message: 'This website uses cookies.',
+                accept: 'Agree',
+                decline: 'Disagree',
+            }
+        },
+    },
+    services: [
+        {
+            name: 'google-analytics',
+            options: {
+                    id: "UA-167517723-2",
+            },
+            purposes: ['analytics'],
+            inject: true,
+        }
+    ]
+});
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-167517723-2');
+</script>
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://blog.spatocode.com/">
+            <img src="/favicon.ico" width="40" height="40" alt="logo"/>
+            <span>
+              Kene&#39;s Blog<br>
+              <small>Sharing my knowledge and thoughts with words.</small>
+            </span>
+          </a>
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="https://blog.spatocode.com/posts/understanding-microservice-architecture/">Understanding microservice architecture</a></h2>
+    <p class="blog-post-meta"><time datetime="2020-06-07T21:20:54+01:00">Sun Jun 07, 2020</time> by Ekene Izukanne in 
+<span class="fas fa-folder" aria-hidden="true"></span>&nbsp;<a href="/categories/software-engineering/" rel="category tag">Software Engineering</a>
+
+
+<span class="fas fa-tag" aria-hidden="true"></span>&nbsp;<a href="/tags/microservices/" rel="tag">microservices</a>, <a href="/tags/devops/" rel="tag">devops</a>, <a href="/tags/backend/" rel="tag">backend</a>, <a href="/tags/software-architecture/" rel="tag">software architecture</a>
+
+</p>
+  </header>
+  <figure><img src="/microservices-architecture.png"
+         alt="microservices-architecture"/>
+</figure>
+
+<p>Microservices is a buzz word in the world of Software Engineering architecture. It has completely changed the way we build our applications nowadays. But what the heck are microservices? Microservice is simply an architectural approach based on building an application as a collection of small services. Using microservices means building applications from loosely coupling services.</p>
+<p>Still confused? Let me give you an instance. We can decide to build an e-commerce application that adopts the microservice architecture. We could build different parts of our application like payment system, review system, authentication system and guest workflow, all as a separate independent service. These systems works independently of each other and can be managed separately.</p>
+<p>Let me give you another instance. Suppose we want to use NodeJS to build a web application which provides a collection of online tools like image processing tool, video processing tool, real-time communication tool and data processing tool. All these tools make up our complete application. Now we want to adopt microservice architecture in building this application. What do we do? We can select the best language and technology for each tool. NodeJS is not best suited for CPU-intensive operations like image/video processing due to being single threaded by default.</p>
+<p>For this reason we may choose to use Golang to build our image/video processing tool because it is a pretty fast compiled language. We can now decide to use NodeJS for building our real-time communication and data processing tool. Awesome right? All these tools are independent of each other and are built separately using different languages. After building these tools we need to integrate it together to form a single application by making sure they communicate properly through a well defined interface.</p>
+<p>Before now Software Engineers make use of monolithic approach in building applications. Monolithic approach means our applications are tightly coupled. They are just a single unit and every part of the application is in one code base. Monolithic architecture is better if your application is simple, and is written in same language.</p>
+<p>Microservice approach gives developers flexibility, simplicity and scalability in building complex applications. That&rsquo;s why a lot of company like Google, Uber, Amazon, Spotify, Netflix, SoundCloud e.t.c. has adopted this approach in building their applications.</p>
+<h3 id="advantages-of-microservices">Advantages of microservices</h3>
+<p>There are many advantages of using microservices in building your applications.</p>
+<h4 id="flexibility">Flexibility</h4>
+<p>Using microservices gives a developer the freedom to choose any technology he wants to use in building any part of his application. Teams can choose the best language for the job at hand. One can decide to choose Go for a service and NodeJS for another.</p>
+<h4 id="productivity">Productivity</h4>
+<p>In this pattern, a developer or team can focus on their own service and avoid getting involves in other services. Bugs are also easier to fix because if a service isn&rsquo;t working well, it&rsquo;s easier to isolate, disassemble and reconfigure them until they do.</p>
+<h4 id="scalability">Scalability</h4>
+<p>Microservices allows us operate, manage, build and scale our services independently. We can scale each service separately based on the needed resources.</p>
+<h4 id="reusability">Reusability</h4>
+<p>In microservice architecture, independent parts of our applications can be reused to build another system or an addition to another feature. This saves developers a lot of time as you don&rsquo;t need to build from scatch.</p>
+<h4 id="agility">Agility</h4>
+<p>Microservice helps teams work in an agile environment. This is because a large team can be split into smaller teams to work on separate parts of an application(services).</p>
+<h3 id="disadvantages-of-microservices">Disadvantages of microservices</h3>
+<p>It&rsquo;s also worth noting that microservices architecture is not a holy grail. There are also downsides in using microservices.</p>
+<h4 id="rigorous-testing">Rigorous testing</h4>
+<p>Testing a monolithic system can be simple as everything is in one code base, whereas using microservices means you have to test each part living on other systems or environments separately before testing the entire application. This consumes a lot of time and makes it harder to configure and perform integration testing.</p>
+<h4 id="integrationorchestration">Integration/Orchestration</h4>
+<p>This can be a problem in microservice architecture. Orchestration is the automated configuration, coordination, and management of computer systems and software which ultimately results in a single process of workflow. Integrating our microservices can be quite complex and tedious. A lot of efforts needs to be put in place in making sure each service are as loosely coupled as possible.</p>
+<h4 id="flexibility-1">Flexibility</h4>
+<p>Yes i listed flexibility as an advantage of microservice architecture, but it can also be a double-edged sword. Building your services with different languages and technologies could make your solution unwieldy and potentially difficult to maintain.</p>
+<h4 id="communication">Communication</h4>
+<p>Microservices needs to communicate with each other as efficiently as possible. Communication between each microservices should be carefully built, as one service may depend on a specific set of input to give a desired output.
+There could be failures if communications between microservice are not thoroughly built.</p>
+<h3 id="tools-related-to-microservices">Tools related to microservices</h3>
+<h4 id="docker">Docker</h4>
+<p>Microservices are usually deployed in containers. Containers are virtual operating systems that act as a packaging for microservices. There are many containers out there but the most popular is <a href="https://www.docker.com">Docker</a>. Docker is a set of platform as a service products that uses OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels. We&rsquo;ll discuss about docker in a separate article. Docker allows microservices to be split into even smaller pieces of code and created as Docker images through files called Dockerfiles. These Dockerfiles make linking microservices into a large application much easier.</p>
+<h4 id="kubernetes">Kubernetes</h4>
+<p><a href="https://kubernetes.io/">Kubernetes</a> is an open-source container-orchestration system for automating application deployment, scaling, and management. It was originally designed by Google, and is now maintained by the Cloud Native Computing Foundation. They are used to host cloud-native applications that are set to scale very quickly. By merging together a group of running containers, Kubernetes creates clusters that can be easily managed. These cluster can be managed in clouds. We&rsquo;ll discuss about Kubernetes in a separate article.</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>Microservices are a loosely coupled independent system which communicates with other microservices through a well-defined interfaces using protocols like http. The functionality of these services remain available even when the machine that hosts this service goes down.</p>
+<p>It&rsquo;s also worth noting that, with all the downsides of microservice architecture, the presence of a good developer and tools can solve these issues easily.</p>
+<p>Using microservices architecture requires rigorous testing and, increase in memory and computing resources.</p>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.spatocode.com%2fposts%2funderstanding-microservice-architecture%2f" title="Share on Facebook"><span class="fab fa-facebook-f fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.spatocode.com%2fposts%2funderstanding-microservice-architecture%2f" title="Share on LinkedIn"><span class="fab fa-linkedin-in fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.spatocode.com%2fposts%2funderstanding-microservice-architecture%2f&amp;text=Understanding%20microservice%20architecture" title="Tweet this"><span class="fab fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-spatocode-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p dir="auto">Articles on Software Engineering and more. All articles are written by <a href="https://www.spatocode.com/about">Ekene Izukanne</a>, Software Developer and Open Sourcerer.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a style="font-size: 0.9rem;" href="/posts/understanding-microservice-architecture/">Understanding microservice architecture</a></li>
+
+<li><a style="font-size: 0.9rem;" href="/posts/calling-c-code-with-cgo/">Calling C code with cgo</a></li>
+
+<li><a style="font-size: 0.9rem;" href="/posts/symmetric-encryption-in-javascript/">Symmetric Encryption in JavaScript</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>Links</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://www.spatocode.com">Website</a></li>
+      
+      <li><a href="https://www.github.com/spatocode">Github</a></li>
+      
+      <li><a href="https://www.twitter.com/itesigwe">Twitter</a></li>
+      
+      <li><a href="https://www.linkedin.com/in/ekeneizukanne">Linkedin</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      Copyright (c) 2020 Ekene Izukanne
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cryptography on Kene&#39;s Blog</title>
+    <link>https://blog.spatocode.com/tags/cryptography/</link>
+    <description>Recent content in cryptography on Kene&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2020 Ekene Izukanne</copyright>
+    <lastBuildDate>Wed, 17 Apr 2019 11:52:54 +0100</lastBuildDate><atom:link href="https://blog.spatocode.com/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Symmetric Encryption in JavaScript</title>
+      <link>https://blog.spatocode.com/posts/symmetric-encryption-in-javascript/</link>
+      <pubDate>Wed, 17 Apr 2019 11:52:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/posts/symmetric-encryption-in-javascript/</guid>
+      <description>Symmetric-key algorithm is a cryptographic algorithm that uses the same cryptographic key for both encrypting of plaintext and decrypting of ciphertext. It means that two or more parties can share this same secret key to maintain a private data. This algorithm is pretty fast and suitable for encrypting large data. Symmetric key algorithm can use either block cipher or stream cipher. The symmetric-key algorithms includes AES(Rijndael), Serpent, Blowfish, DES, Twofish, RC4 and in this article I’ll be talking about AES(Rijndael).</description>
+    </item>
+    
+  </channel>
+</rss>

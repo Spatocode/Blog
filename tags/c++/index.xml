@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c&#43;&#43; on Kene&#39;s Blog</title>
+    <link>https://blog.spatocode.com/tags/c&#43;&#43;/</link>
+    <description>Recent content in c&#43;&#43; on Kene&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2020 Ekene Izukanne</copyright>
+    <lastBuildDate>Thu, 22 Aug 2019 00:59:54 +0100</lastBuildDate><atom:link href="https://blog.spatocode.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Calling C code with cgo</title>
+      <link>https://blog.spatocode.com/posts/calling-c-code-with-cgo/</link>
+      <pubDate>Thu, 22 Aug 2019 00:59:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/posts/calling-c-code-with-cgo/</guid>
+      <description>C has long being the lingua-franca of programming. While programming languages, frameworks, tools e.t.c. come and go, this general-purpose, low level language developed at Bells Lab by Dennis Ritchie has been around for decades and shows no sign of fading. This is largely because of its closeness to hardware, great portability and efficiency, which made it an ideal choice for low-level development. Many programs today such as the Linux OS, Windows OS, PostgreSQL database, hardware drivers e.</description>
+    </item>
+    
+  </channel>
+</rss>

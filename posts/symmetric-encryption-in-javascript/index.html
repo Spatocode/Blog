@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Symmetric Encryption in JavaScript" />
+<meta property="og:description" content="Symmetric-key algorithm is a cryptographic algorithm that uses the same cryptographic key for both encrypting of plaintext and decrypting of ciphertext. It means that two or more parties can share this same secret key to maintain a private data. This algorithm is pretty fast and suitable for encrypting large data. Symmetric key algorithm can use either block cipher or stream cipher. The symmetric-key algorithms includes AES(Rijndael), Serpent, Blowfish, DES, Twofish, RC4 and in this article I’ll be talking about AES(Rijndael)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.spatocode.com/posts/symmetric-encryption-in-javascript/" /><meta property="og:image" content="https://blog.spatocode.com/encryption.jpeg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-04-17T11:52:54+01:00" />
+<meta property="article:modified_time" content="2019-04-17T11:52:54+01:00" />
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://blog.spatocode.com/encryption.jpeg"/>
+
+<meta name="twitter:title" content="Symmetric Encryption in JavaScript"/>
+<meta name="twitter:description" content="Symmetric-key algorithm is a cryptographic algorithm that uses the same cryptographic key for both encrypting of plaintext and decrypting of ciphertext. It means that two or more parties can share this same secret key to maintain a private data. This algorithm is pretty fast and suitable for encrypting large data. Symmetric key algorithm can use either block cipher or stream cipher. The symmetric-key algorithms includes AES(Rijndael), Serpent, Blowfish, DES, Twofish, RC4 and in this article I’ll be talking about AES(Rijndael)."/>
+<meta name="generator" content="Hugo 0.104.0" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Symmetric Encryption in JavaScript",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https://blog.spatocode.com/encryption.jpeg",
+    "height": "550",
+    "width": "550"
+  },
+  "url": "https://blog.spatocode.com/posts/symmetric-encryption-in-javascript/",
+  "wordCount": "718",
+  "datePublished": "2019-04-17T11:52:54+01:00",
+  "dateModified": "2019-04-17T11:52:54+01:00",
+  "author": {
+    "@type": "Person",
+    "name": "Ekene Izukanne"
+  },
+  "keywords": "Software Engineering, cryptography, javascript, nodejs"
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://blog.spatocode.com/posts/symmetric-encryption-in-javascript/">
+
+    <title>Symmetric Encryption in JavaScript | Kene&#39;s Blog</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="https://blog.spatocode.com/css/style.d50ccb40fc95978386d80826c3835f7987150679f8d6e8bffff106e335ec0615.css" rel="stylesheet" integrity="sha256-1QzLQPyVl4OG2Agmw4NfeYcVBnn41ui///EG4zXsBhU=" crossorigin="anonymous">
+    <link rel="icon" href="/favicon.ico" />
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="https://blog.spatocode.com/js/fontawesome.min.16a86fa8fbdecc0f27392feecb61ee0803a507820bded359407103a49126b52c.js" integrity="sha256-FqhvqPvezA8nOS/uy2HuCAOlB4IL3tNZQHEDpJEmtSw=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+    
+<script src="https://blog.spatocode.com/js/haven.umd.min.0cfe03b21fccee4e397633c446b6aea85e9f14a1c285d7c9aec8808c89796900.js" integrity="sha256-DP4Dsh/M7k45djPERrauqF6fFKHChdfJrsiAjIl5aQA=" crossorigin="anonymous"></script>
+
+<script>
+Haven.create({
+    notification: {
+        
+        styles: {
+            background: '#428bca',
+            textColor: '#ffffff',
+            buttonBackgroundColor: '#f71559',
+            buttonTextColor: '#ffffff',
+        },
+    },
+    translations: {
+      "en": {
+            notification: {
+                policy: 'Learn more.',
+                message: 'This website uses cookies.',
+                accept: 'Agree',
+                decline: 'Disagree',
+            }
+        },
+    },
+    services: [
+        {
+            name: 'google-analytics',
+            options: {
+                    id: "UA-167517723-2",
+            },
+            purposes: ['analytics'],
+            inject: true,
+        }
+    ]
+});
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-167517723-2');
+</script>
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://blog.spatocode.com/">
+            <img src="/favicon.ico" width="40" height="40" alt="logo"/>
+            <span>
+              Kene&#39;s Blog<br>
+              <small>Sharing my knowledge and thoughts with words.</small>
+            </span>
+          </a>
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="https://blog.spatocode.com/posts/symmetric-encryption-in-javascript/">Symmetric Encryption in JavaScript</a></h2>
+    <p class="blog-post-meta"><time datetime="2019-04-17T11:52:54+01:00">Wed Apr 17, 2019</time> by Ekene Izukanne in 
+<span class="fas fa-folder" aria-hidden="true"></span>&nbsp;<a href="/categories/software-engineering/" rel="category tag">Software Engineering</a>
+
+
+<span class="fas fa-tag" aria-hidden="true"></span>&nbsp;<a href="/tags/cryptography/" rel="tag">cryptography</a>, <a href="/tags/javascript/" rel="tag">javascript</a>, <a href="/tags/nodejs/" rel="tag">nodejs</a>
+
+</p>
+  </header>
+  <figure><img src="/encryption.jpeg"
+         alt="Encryption_image"/>
+</figure>
+
+<p>Symmetric-key algorithm is a cryptographic algorithm that uses the same cryptographic key for both encrypting of plaintext and decrypting of ciphertext. It means that two or more parties can share this same secret key to maintain a private data. This algorithm is pretty fast and suitable for encrypting large data. Symmetric key algorithm can use either block cipher or stream cipher. The symmetric-key algorithms includes AES(Rijndael), Serpent, Blowfish, DES, Twofish, RC4 and in this article I’ll be talking about AES(Rijndael).</p>
+<h4 id="advanced-encryption-standardaes">Advanced Encryption Standard(AES)</h4>
+<p>In January 1997 NIST announced a call for creating a new cipher. Various ciphers were proposed by many groups and after examining them extensively based on speed and security parameters etc, NIST finally chose Rijnadael algorithm. On October 2000 it was selected as advanced encryption standard(AES) and the best algorithm in terms of security, cost, resilience, integrity and survillance of the algorithm.</p>
+<p>Rijndael was developed by two Belgian cryptographers, Joan Daemen and Vincent Rijmen at the Electrical Engineering Department of Katholieke University in Leuven.</p>
+<h4 id="aes-encryption-in-javascript">AES Encryption in JavaScript</h4>
+<p>Nodejs provides a crypto module for working with cryptographic functionalities like OpenSSL’s hash, cipher, decipher, sign, verify and HMAC functions. There are many cryptography libraries out there for browser javascript and nodejs as well but i’m gonna use the nodejs built-in crypto module on this one.</p>
+<p>I believe a program is worth a thousand words 😀. So let’s write one.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">crypto</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">algorithm</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;aes-192-cbc&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Password used to generate key&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">scryptSync</span>(<span style="color:#a6e22e">password</span>, <span style="color:#e6db74">&#39;salt&#39;</span>, <span style="color:#ae81ff">24</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">iv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Buffer</span>.<span style="color:#a6e22e">alloc</span>(<span style="color:#ae81ff">16</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cipher</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createCipheriv</span>(<span style="color:#a6e22e">algorithm</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cipher</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;readable&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">cipher</span>.<span style="color:#a6e22e">read</span>().<span style="color:#a6e22e">toString</span>(<span style="color:#e6db74">&#39;hex&#39;</span>));
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cipher</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;some plain text data to encrypt&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">cipher</span>.<span style="color:#a6e22e">end</span>();
+</span></span></code></pre></div><p>As you can see it takes just 13 lines of code. To create a cipher, nodejs crypto module makes use of createCipheriv() method which creates and returns a cipher object with the given algorithm, key and initialization vector(iv). In this piece of code, this cipher object is used as a readable stream and writable stream. It’s first parameter is the underlying algorithm being used which is based on OpenSSL. The next is the raw key used by the algorithm and the other is the <a href="https://en.wikipedia.org/wiki/Initialization_vector">initialization vector</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">crypto</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">algorithm</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;aes-192-cbc&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Password used to generate key&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">scryptSync</span>(<span style="color:#a6e22e">password</span>, <span style="color:#e6db74">&#39;salt&#39;</span>, <span style="color:#ae81ff">24</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">iv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Buffer</span>.<span style="color:#a6e22e">alloc</span>(<span style="color:#ae81ff">16</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">decipher</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createDecipheriv</span>(<span style="color:#a6e22e">algorithm</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">decipher</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;readable&#39;</span>, () =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">decipher</span>.<span style="color:#a6e22e">read</span>().<span style="color:#a6e22e">toString</span>(<span style="color:#e6db74">&#39;utf8&#39;</span>));
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">decipher</span>.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#39;b084a02f106834f4349f7b162bff92ac4c7449886446b2459e7768935ef94882&#39;</span>, <span style="color:#e6db74">&#39;hex&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">decipher</span>.<span style="color:#a6e22e">end</span>();
+</span></span></code></pre></div><p>This is just the reverse reaction of our first example. There’s nothing new in this one except the use of createDecipheriv() method to create a decipher class used for decrypting of data.</p>
+<p>We’ll go a bit advanced on now. In the real world, while working on cryptographic schemes, it’s pretty common to store the encrypted data on the disk or where ever you find convenient. Let’s go a bit deeper to encrypt a file on the disk.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">crypto</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">algorithm</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;aes-192-cbc&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;This is my password&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">scryptSync</span>(<span style="color:#a6e22e">password</span>, <span style="color:#e6db74">&#39;salt&#39;</span>, <span style="color:#ae81ff">24</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">iv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Buffer</span>.<span style="color:#a6e22e">alloc</span>(<span style="color:#ae81ff">16</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cipher</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createCipheriv</span>(<span style="color:#a6e22e">algorithm</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// write the encrypted data to disk
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">homeDir</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USERPROFILE</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fileToEncrypt</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">homeDir</span>, <span style="color:#e6db74">&#34;file-name.txt&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createReadStream</span>(<span style="color:#a6e22e">fileToEncrypt</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createWriteStream</span>(<span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">fileToEncrypt</span><span style="color:#e6db74">}</span><span style="color:#e6db74">.sec`</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">cipher</span>).<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">output</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">unlinkSync</span>(<span style="color:#a6e22e">fileToEncrypt</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Encryption successfull!!!&#39;</span>)
+</span></span></code></pre></div><p>In this piece of code, the cipher object is used with piped steams to read a file, encrypt its contents and store it on the disk with a different file extension. When this is done, the original file remains on the disk along with the encrypted version of it. To make your encryption worth it, you need to get rid of the original version and nodejs provides the unlinkSync() method from the built-in file system module.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">crypto</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;fs&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">algorithm</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;aes-192-cbc&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">key</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">scryptSync</span>(<span style="color:#a6e22e">password</span>, <span style="color:#e6db74">&#39;salt&#39;</span>, <span style="color:#ae81ff">24</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">iv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Buffer</span>.<span style="color:#a6e22e">alloc</span>(<span style="color:#ae81ff">16</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">decipher</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createDecipheriv</span>(<span style="color:#a6e22e">algorithm</span>, <span style="color:#a6e22e">key</span>, <span style="color:#a6e22e">iv</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">homeDir</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">USERPROFILE</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fileToEncrypt</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">homeDir</span>, <span style="color:#e6db74">&#34;file-name.txt&#34;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createReadStream</span>(<span style="color:#a6e22e">fileToEncrypt</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">output</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">createWriteStream</span>(<span style="color:#a6e22e">fileToEncrypt</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">fileToEncrypt</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">decipher</span>).<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">output</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">fs</span>.<span style="color:#a6e22e">unlinkSync</span>(<span style="color:#a6e22e">fileToEncrypt</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Decryption successfull!!!&#39;</span>)
+</span></span></code></pre></div><p>The reverse reaction of the encryption is quiet clear and i’ll leave you to figure it out.</p>
+<p>You can check out <a href="https://github.com/Spatocode/secrecy">secrecy</a>, a cli tool which uses AES algorithm for encrypting and keeping your files secret.</p>
+<p>Thanks for reading. Kindly share.</p>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fblog.spatocode.com%2fposts%2fsymmetric-encryption-in-javascript%2f" title="Share on Facebook"><span class="fab fa-facebook-f fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fblog.spatocode.com%2fposts%2fsymmetric-encryption-in-javascript%2f" title="Share on LinkedIn"><span class="fab fa-linkedin-in fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fblog.spatocode.com%2fposts%2fsymmetric-encryption-in-javascript%2f&amp;text=Symmetric%20Encryption%20in%20JavaScript" title="Tweet this"><span class="fab fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "blog-spatocode-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module sidebar-module-inset">
+    <h4>About</h4>
+    <p dir="auto">Articles on Software Engineering and more. All articles are written by <a href="https://www.spatocode.com/about">Ekene Izukanne</a>, Software Developer and Open Sourcerer.</p>
+  </section>
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a style="font-size: 0.9rem;" href="/posts/understanding-microservice-architecture/">Understanding microservice architecture</a></li>
+
+<li><a style="font-size: 0.9rem;" href="/posts/calling-c-code-with-cgo/">Calling C code with cgo</a></li>
+
+<li><a style="font-size: 0.9rem;" href="/posts/symmetric-encryption-in-javascript/">Symmetric Encryption in JavaScript</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+  <section class="sidebar-module">
+    <h4>Links</h4>
+    <ol class="list-unstyled">
+      
+      <li><a href="https://www.spatocode.com">Website</a></li>
+      
+      <li><a href="https://www.github.com/spatocode">Github</a></li>
+      
+      <li><a href="https://www.twitter.com/itesigwe">Twitter</a></li>
+      
+      <li><a href="https://www.linkedin.com/in/ekeneizukanne">Linkedin</a></li>
+      
+    </ol>
+  </section>
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      Copyright (c) 2020 Ekene Izukanne
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kene&#39;s Blog</title>
+    <link>https://blog.spatocode.com/</link>
+    <description>Recent content on Kene&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2020 Ekene Izukanne</copyright>
+    <lastBuildDate>Sun, 07 Jun 2020 21:20:54 +0100</lastBuildDate><atom:link href="https://blog.spatocode.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding microservice architecture</title>
+      <link>https://blog.spatocode.com/posts/understanding-microservice-architecture/</link>
+      <pubDate>Sun, 07 Jun 2020 21:20:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/posts/understanding-microservice-architecture/</guid>
+      <description>Microservices is a buzz word in the world of Software Engineering architecture. It has completely changed the way we build our applications nowadays. But what the heck are microservices? Microservice is simply an architectural approach based on building an application as a collection of small services. Using microservices means building applications from loosely coupling services.
+Still confused? Let me give you an instance. We can decide to build an e-commerce application that adopts the microservice architecture.</description>
+    </item>
+    
+    <item>
+      <title>Calling C code with cgo</title>
+      <link>https://blog.spatocode.com/posts/calling-c-code-with-cgo/</link>
+      <pubDate>Thu, 22 Aug 2019 00:59:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/posts/calling-c-code-with-cgo/</guid>
+      <description>C has long being the lingua-franca of programming. While programming languages, frameworks, tools e.t.c. come and go, this general-purpose, low level language developed at Bells Lab by Dennis Ritchie has been around for decades and shows no sign of fading. This is largely because of its closeness to hardware, great portability and efficiency, which made it an ideal choice for low-level development. Many programs today such as the Linux OS, Windows OS, PostgreSQL database, hardware drivers e.</description>
+    </item>
+    
+    <item>
+      <title>Symmetric Encryption in JavaScript</title>
+      <link>https://blog.spatocode.com/posts/symmetric-encryption-in-javascript/</link>
+      <pubDate>Wed, 17 Apr 2019 11:52:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/posts/symmetric-encryption-in-javascript/</guid>
+      <description>Symmetric-key algorithm is a cryptographic algorithm that uses the same cryptographic key for both encrypting of plaintext and decrypting of ciphertext. It means that two or more parties can share this same secret key to maintain a private data. This algorithm is pretty fast and suitable for encrypting large data. Symmetric key algorithm can use either block cipher or stream cipher. The symmetric-key algorithms includes AES(Rijndael), Serpent, Blowfish, DES, Twofish, RC4 and in this article I’ll be talking about AES(Rijndael).</description>
+    </item>
+    
+  </channel>
+</rss>

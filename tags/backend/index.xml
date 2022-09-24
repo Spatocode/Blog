@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>backend on Kene&#39;s Blog</title>
+    <link>https://blog.spatocode.com/tags/backend/</link>
+    <description>Recent content in backend on Kene&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2020 Ekene Izukanne</copyright>
+    <lastBuildDate>Sun, 07 Jun 2020 21:20:54 +0100</lastBuildDate><atom:link href="https://blog.spatocode.com/tags/backend/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding microservice architecture</title>
+      <link>https://blog.spatocode.com/posts/understanding-microservice-architecture/</link>
+      <pubDate>Sun, 07 Jun 2020 21:20:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/posts/understanding-microservice-architecture/</guid>
+      <description>Microservices is a buzz word in the world of Software Engineering architecture. It has completely changed the way we build our applications nowadays. But what the heck are microservices? Microservice is simply an architectural approach based on building an application as a collection of small services. Using microservices means building applications from loosely coupling services.
+Still confused? Let me give you an instance. We can decide to build an e-commerce application that adopts the microservice architecture.</description>
+    </item>
+    
+  </channel>
+</rss>

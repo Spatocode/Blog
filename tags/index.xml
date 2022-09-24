@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Kene&#39;s Blog</title>
+    <link>https://blog.spatocode.com/tags/</link>
+    <description>Recent content in Tags on Kene&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2020 Ekene Izukanne</copyright>
+    <lastBuildDate>Sun, 07 Jun 2020 21:20:54 +0100</lastBuildDate><atom:link href="https://blog.spatocode.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>backend</title>
+      <link>https://blog.spatocode.com/tags/backend/</link>
+      <pubDate>Sun, 07 Jun 2020 21:20:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/backend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://blog.spatocode.com/tags/devops/</link>
+      <pubDate>Sun, 07 Jun 2020 21:20:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microservices</title>
+      <link>https://blog.spatocode.com/tags/microservices/</link>
+      <pubDate>Sun, 07 Jun 2020 21:20:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software architecture</title>
+      <link>https://blog.spatocode.com/tags/software-architecture/</link>
+      <pubDate>Sun, 07 Jun 2020 21:20:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/software-architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c</title>
+      <link>https://blog.spatocode.com/tags/c/</link>
+      <pubDate>Thu, 22 Aug 2019 00:59:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c&#43;&#43;</title>
+      <link>https://blog.spatocode.com/tags/c&#43;&#43;/</link>
+      <pubDate>Thu, 22 Aug 2019 00:59:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cgo</title>
+      <link>https://blog.spatocode.com/tags/cgo/</link>
+      <pubDate>Thu, 22 Aug 2019 00:59:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/cgo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://blog.spatocode.com/tags/go/</link>
+      <pubDate>Thu, 22 Aug 2019 00:59:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://blog.spatocode.com/tags/golang/</link>
+      <pubDate>Thu, 22 Aug 2019 00:59:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cryptography</title>
+      <link>https://blog.spatocode.com/tags/cryptography/</link>
+      <pubDate>Wed, 17 Apr 2019 11:52:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/cryptography/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://blog.spatocode.com/tags/javascript/</link>
+      <pubDate>Wed, 17 Apr 2019 11:52:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://blog.spatocode.com/tags/nodejs/</link>
+      <pubDate>Wed, 17 Apr 2019 11:52:54 +0100</pubDate>
+      
+      <guid>https://blog.spatocode.com/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
