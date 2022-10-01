@@ -3,9 +3,11 @@ title: "Code Coverage from Cypress End-to-End Test"
 date: 2021-06-19T00:59:54+01:00
 categories: ["Software Testing"]
 tags: ["javascript", "frontend", "testing", "cypress"]
-images: ["/cgo.jpg"]
+images: ["/cypress-cover.jpg"]
 draft: false
 ---
+
+{{< figure src="/cypress-cover.jpg" alt="cypress-code-coverage" >}}
 
 Testing is an important part of software engineering. It helps shipping code faster while making sure our application works properly when changes are made. It makes sure unintended bugs are identified proactively before application moves into production. But how do we know when our tests are enough? Are there parts of the application still untested? That's where code coverage comes into play.
 
