@@ -40,7 +40,7 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
-gtag('config', 'UA-167517723-2');
+gtag('config', {{ .Site.Params.googleAnalytics }});
 </script>
 
 {{- /* vim: set ts=2 sw=2 et: */}}
