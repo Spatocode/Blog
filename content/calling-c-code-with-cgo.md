@@ -1,7 +1,7 @@
 ---
 title: "Calling C code with cgo"
 date: 2019-08-22T00:59:54+01:00
-categories: ["Software Engineering"]
+categories: ["Software"]
 tags: ["golang", "go", "cgo", "c", "c++"]
 images: ["/cgo.jpg"]
 draft: false

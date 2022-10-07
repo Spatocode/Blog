@@ -1,7 +1,7 @@
 ---
 title: "Code Coverage from Cypress End-to-End Test"
 date: 2021-06-19T00:59:54+01:00
-categories: ["Software Testing"]
+categories: ["Software"]
 tags: ["javascript", "frontend", "testing", "cypress"]
 images: ["/cypress-cover.jpg"]
 draft: false

@@ -1,7 +1,7 @@
 ---
 title: "Understanding microservice architecture"
 date: 2020-06-07T21:20:54+01:00
-categories: ["Software Engineering"]
+categories: ["Software"]
 tags: ["microservices", "devops", "backend", "software architecture"]
 images: ["/microservices-architecture.png"]
 draft: false
